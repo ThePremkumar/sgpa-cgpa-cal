@@ -143,3 +143,11 @@ color: white;
 .delete-btn:hover {
     color: darkred; /* Change color on hover */
 }
+
+
+@media screen and (max-height: 425px) and (min-aspect-ratio:7/4){
+    .container, .hello,footer{
+        max-width: 700px;
+        margin: auto;
+    }
+}
