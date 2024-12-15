@@ -211,7 +211,7 @@ color: white;
     background-color: rgb(73, 96, 73);
     background-image: radial-gradient(whitesmoke,rgb(123, 150, 123));
   }
-  .container,.hello,.linkedin{
+  .container,.hello,.linkedin,.form-container{
     max-width: 600px;
     margin: auto;
     padding: auto;
