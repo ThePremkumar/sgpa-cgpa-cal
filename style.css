@@ -243,7 +243,7 @@ color: white;
     padding: auto;
   }
   .container,.hello,.linkedin,footer{
-    max-width: 800px;
+    max-width: 100%;
     margin: auto;
     padding: auto;
   }
