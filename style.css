@@ -224,6 +224,9 @@ color: white;
     display: block;
     overflow-x: auto; /* Horizontal scrolling */
     white-space: nowrap; /* Prevents text wrapping */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center;
   }
 
   th, td {
