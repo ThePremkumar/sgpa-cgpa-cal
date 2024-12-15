@@ -293,7 +293,7 @@ document.getElementById('email-form').addEventListener('submit', function(event)
     }
   
     // Enhance mailto: URL (optional)
-    const mailtoLink = `mailto:your-email@example.com?subject=Message from ${name}&body=${encodeURIComponent(message)}%0A%0AFrom: ${email}`;
+    const mailtoLink = `mailto:spremkumar2424@gmail.com?subject=Message from ${name}&body=${encodeURIComponent(message)}%0A%0AFrom: ${email}`;
     
     // Redirect to mailto link
     window.location.href = mailtoLink;
