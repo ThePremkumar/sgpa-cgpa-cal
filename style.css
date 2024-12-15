@@ -112,8 +112,8 @@ button {
     padding: 8px 15px;
     margin-right: 5px;
     background: #4CA1AF;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to left, #C4E0E5, #4CA1AF);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to left, #C4E0E5, #4CA1AF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: -webkit-linear-gradient(to left, #C4E0E5, #4CA1AF);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #C4E0E5, #4CA1AF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
 }
 button:hover {
@@ -189,16 +189,20 @@ color: white;
 }
 
 
-.delete-btn button {
+.delete-btn {
     background-color: transparent; /* Make the button background transparent */
     border: none; /* Remove border */
+    width: 50px; /* Set width */
+      height: 50px; /* Set height */
+      border-radius: 50%; /* Makes it a perfect circle */
     color: red; /* Change the color of the "X" to red */
     font-size: 18px; /* Increase font size if needed */
     cursor: pointer; /* Change cursor to pointer on hover */
     transition: color 0.3s ease; /* Smooth color transition */
+    text-align: center;
 }
 
-.delete-btn:hover {
+.delete-btn:hover{
     color: darkred; /* Change color on hover */
 }
 
