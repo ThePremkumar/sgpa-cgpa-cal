@@ -74,16 +74,28 @@ function handleRegisterChange() {
     }
 }
 
+function resetSemesterAndSubjects() {
+    // Reset semester to default (deselect)
+    document.getElementById('semester').value = '';
+
+    // Clear subject list
+    document.getElementById('subjectList').innerHTML = '';
+
+    // Check if register number is entered
+}
+
+
 function validateRegister() {
     const registerInput = document.getElementById('registerNumber').value.trim();
     if (!registerInput || registerInput <= 0) {
-        alert('Enter a valid register number before selecting the batch!');
+        alert('Enter the register number before selecting the batch!');
         document.getElementById('batch').value = "";
         return;
     }
 }
 
 function updateSubjects() {
+    
     const batch = document.getElementById('batch').value;
     const semester = document.getElementById('semester').value;
     const subjectListDiv = document.getElementById('subjectList');

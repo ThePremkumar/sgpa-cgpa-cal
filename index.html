@@ -21,8 +21,9 @@
 
     <head>
       <div class="hello">
-      <h1 class="hel">Hello CSBS,</h1>
-      <h2>Welcome guys!</h2>
+        <h1>Welcome guys!</h1>
+      <h2 class="hel">Hello CSBS, <span class="pk">I am Mr. PK</span></h2>
+      
         <p class="wel"><li>Note:</li><br>This calculator is specifically designed for the Computer Science and Business Systems (CSBS) department to help students efficiently calculate their SGPA (Semester Grade Point Average).
         If you encounter any mistakes, incorrect information, or have suggestions for improvements, please feel free to reach out to me.</p>
       <p>
@@ -40,7 +41,7 @@
 
       <label for="registerNumber">Register Number:</label>
       <input
-        type="number"
+        type="text"
         id="registerNumber"
         placeholder="Enter your register number"
         oninput="handleRegisterChange()"
@@ -48,7 +49,7 @@
       />
 
       <label for="batch">Select Batch:</label>
-      <select id="batch" onchange="validateRegister()">
+      <select id="batch" onchange="resetSemesterAndSubjects();validateRegister(); updateSubjects();">
         <option value="">--Select Batch--</option>
         <option value="2022-2026">2022-2026</option>
         <option value="2023-2027">2023-2027</option>
