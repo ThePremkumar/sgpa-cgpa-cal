@@ -245,15 +245,13 @@ color: white;
     padding: auto;
   }
   table {
-    width: 100%; /* Ensures table adjusts to screen */
-    display: block;
-    overflow-x: auto; /* Horizontal scrolling */
-    white-space: nowrap; /* Prevents text wrapping */
+    width: 90%; /* Slightly smaller table for medium-sized screens */
+    margin: 0 auto; /* Center the table */
   }
 
   th, td {
-    padding: 6px;
-    font-size: 12px; /* Reduces font size */
+    padding: 8px; /* Reduce padding for better fit */
+    font-size: 14px; /* Adjust font size */
   }
 }
 
