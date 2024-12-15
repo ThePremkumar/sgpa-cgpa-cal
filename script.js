@@ -276,3 +276,29 @@ window.onload = () => {
         updateChart(registerNumber);
     }
 };
+
+
+
+document.getElementById('email-form').addEventListener('submit', function(event) {
+    // Capture input values
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const message = document.getElementById('message').value.trim();
+  
+    // Validation
+    if (!name || !email || !message) {
+      alert('Please fill in all fields before submitting.');
+      event.preventDefault(); // Stop form submission
+      return;
+    }
+  
+    // Enhance mailto: URL (optional)
+    const mailtoLink = `mailto:your-email@example.com?subject=Message from ${name}&body=${encodeURIComponent(message)}%0A%0AFrom: ${email}`;
+    
+    // Redirect to mailto link
+    window.location.href = mailtoLink;
+  
+    // Prevent default form action
+    event.preventDefault();
+  });
+  

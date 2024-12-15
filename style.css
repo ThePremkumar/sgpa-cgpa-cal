@@ -160,7 +160,6 @@ footer{
     max-width: 800px;
     margin: auto;
     padding: 20px;
-    color: ;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     background: #0F2027;  /* fallback for old browsers */
@@ -206,12 +205,128 @@ color: white;
 .pk{
 
 }
+/* ||SMALL */
+@media screen and (min-width: 320px) and (max-width:576px){
+  body{
+    background-color: rgb(73, 96, 73);
+    background-image: radial-gradient(whitesmoke,rgb(123, 150, 123));
+  }
+  .container,.hello,.linkedin{
+    max-width: 600px;
+    margin: auto;
+    padding: auto;
+  }
+}
+@media screen and (min-width: 600px) and (max-width:1080px){
+  body{
+    background-color: rebeccapurple;
+    background-image: radial-gradient(whitesmoke,rgb(164, 118, 210));
+  }
+  .container,.hello,.linkedin,footer{
+    max-width: 600px;
+    margin: auto;
+    padding: auto;
+  }
+}
+
+ 
+/* ||MEDIUM 
+@media screen and (min-width:768px){
+  body{
+    background-color: firebrick;
+    background-image: radial-gradient(whitesmoke,gold);
+  }
+}*/
+
+/* ||LARGE
+@media screen and (min-width: 992px){
+  body{
+    background-color: firebrick;
+    background-image: radial-gradient(whitesmoke,firebrick);
+  }
+} */
 
 
+/* ||XL
+@media screen and (min-width: 1200px){
+  body{
+    background-color: rebeccapurple;
+    background-image: radial-gradient(whitesmoke,rebeccapurple);
+  }
+} */
 
+/* || MOBILE DEVICE LANDSCAPE */
 @media screen and (max-height: 425px) and (min-aspect-ratio:7/4){
+  body{
+    background-color: dodgerblue;
+    background-image: radial-gradient(whitesmoke,dodgerblue);
+  }
+
+  
     .container, .hello,footer{
         max-width: 700px;
         margin: auto;
+
     }
 }
+
+
+
+
+.form-container {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  line-height: 1.6;
+}
+
+.form-container,input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.form-container,h2 {
+  text-align: center;
+  color: #007BFF;
+  margin-bottom: 20px;
+}
+
+.form-container,label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.form-container,textarea {
+  resize: none;
+}
+
+
+.form-container,button {
+  width: 100%;
+  margin-top: 15px;
+  padding: 10px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #007BFF;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.form-container,button:hover {
+  background-color: #0056b3;
+}
+
+.form-container,button:active {
+  transform: scale(0.98);
+}
+
