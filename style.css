@@ -215,7 +215,7 @@ color: white;
     padding: auto;
   }
   .container,.hello,.linkedin,.form-container{
-    max-width: 1;
+    max-width: 700px;
     margin: auto;
     padding: auto;
   }
@@ -240,14 +240,19 @@ color: white;
     padding: auto;
   }
   .container,.hello,.linkedin,footer{
-    max-width: 600px;
+    max-width: 800px;
     margin: auto;
     padding: auto;
   }
   table {
     width: 90%; /* Slightly smaller table for medium-sized screens */
     margin: 0 auto; /* Center the table */
-  }
+    border-collapse: collapse;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    }
+
 
   th, td {
     padding: 8px; /* Reduce padding for better fit */
