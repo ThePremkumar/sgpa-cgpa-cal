@@ -210,22 +210,50 @@ color: white;
   body{
     background-color: rgb(73, 96, 73);
     background-image: radial-gradient(whitesmoke,rgb(123, 150, 123));
-  }
-  .container,.hello,.linkedin,.form-container{
     max-width: 600px;
     margin: auto;
     padding: auto;
+  }
+  .container,.hello,.linkedin,.form-container{
+    max-width: 1;
+    margin: auto;
+    padding: auto;
+  }
+  table {
+    width: 100%; /* Ensures table adjusts to screen */
+    display: block;
+    overflow-x: auto; /* Horizontal scrolling */
+    white-space: nowrap; /* Prevents text wrapping */
+  }
+
+  th, td {
+    padding: 6px;
+    font-size: 12px; /* Reduces font size */
   }
 }
 @media screen and (min-width: 600px) and (max-width:1080px){
   body{
     background-color: rebeccapurple;
     background-image: radial-gradient(whitesmoke,rgb(164, 118, 210));
+    max-width: 1000px;
+    margin: auto;
+    padding: auto;
   }
   .container,.hello,.linkedin,footer{
     max-width: 600px;
     margin: auto;
     padding: auto;
+  }
+  table {
+    width: 100%; /* Ensures table adjusts to screen */
+    display: block;
+    overflow-x: auto; /* Horizontal scrolling */
+    white-space: nowrap; /* Prevents text wrapping */
+  }
+
+  th, td {
+    padding: 6px;
+    font-size: 12px; /* Reduces font size */
   }
 }
 
@@ -261,12 +289,20 @@ color: white;
     background-color: dodgerblue;
     background-image: radial-gradient(whitesmoke,dodgerblue);
   }
-
-  
     .container, .hello,footer{
         max-width: 700px;
         margin: auto;
-
+    }
+    table {
+      width: 100%; /* Ensures table adjusts to screen */
+      display: block;
+      overflow-x: auto; /* Horizontal scrolling */
+      white-space: nowrap; /* Prevents text wrapping */
+    }
+  
+    th, td {
+      padding: 6px;
+      font-size: 12px; /* Reduces font size */
     }
 }
 

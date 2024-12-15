@@ -1,49 +1,49 @@
 const subjectsData = {
     '2022-2026': {
     1: [
-        { code: "BS3171", name: "Physics and Chemistry Laboratory", credits: 2 },
-        { code: "CY3151", name: "Engineering Chemistry", credits: 3 },
-        { code: "GE3151", name: "Problem Solving and Python Programming", credits: 3 },
-        { code: "GE3152", name: "Heritage of Tamils", credits: 1 },
-        { code: "GE3171", name: "Problem Solving and Python Programming Laboratory", credits: 2 },
-        { code: "GE3172", name: "English Laboratory", credits: 1 },
-        { code: "HS3152", name: "Professional English - I", credits: 3 },
-        { code: "MA3151", name: "Matrices and Calculus", credits: 4 },
-        { code: "PH3151", name: "Engineering Physics", credits: 3 }
+        { sem:1, code: "BS3171", name: "Physics and Chemistry Laboratory", credits: 2 },
+        { sem:1,  code: "CY3151", name: "Engineering Chemistry", credits: 3 },
+        { sem:1,  code: "GE3151", name: "Problem Solving and Python Programming", credits: 3 },
+        { sem:1,  code: "GE3152", name: "Heritage of Tamils", credits: 1 },
+        { sem:1,  code: "GE3171", name: "Problem Solving and Python Programming Laboratory", credits: 2 },
+        { sem:1,  code: "GE3172", name: "English Laboratory", credits: 1 },
+        { sem:1,  code: "HS3152", name: "Professional English - I", credits: 3 },
+        { sem:1,  code: "MA3151", name: "Matrices and Calculus", credits: 4 },
+        { sem:1,  code: "PH3151", name: "Engineering Physics", credits: 3 }
     ],
     2: [
-        { code: "AD3251", name: "Data Structures Design", credits: 3 },
-        { code: "AD3271", name: "Data Structures Design Laboratory", credits: 2 },
-        { code: "BE3251", name: "Basic Electrical and Electronics Engineering", credits: 3 },
-        { code: "GE3251", name: "Engineering Graphics", credits: 4 },
-        { code: "GE3252", name: "தமிழரும் தொழில்நுட்பமும்", credits: 1 },
-        { code: "GE3271", name: "Engineering Practices Laboratory", credits: 2 },
-        { code: "GE3272", name: "Communication Lab", credits: 2 },
-        { code: "HS3252", name: "Professional English - II", credits: 2 },
-        { code: "MA3251", name: "Statistics and Numerical Methods", credits: 4 },
-        { code: "PH3256", name: "Physics for Information Science", credits: 3 }
+        { sem:2, code: "AD3251", name: "Data Structures Design", credits: 3 },
+        { sem:2, code: "AD3271", name: "Data Structures Design Laboratory", credits: 2 },
+        { sem:2, code: "BE3251", name: "Basic Electrical and Electronics Engineering", credits: 3 },
+        { sem:2, code: "GE3251", name: "Engineering Graphics", credits: 4 },
+        { sem:2, code: "GE3252", name: "தமிழரும் தொழில்நுட்பமும்", credits: 1 },
+        { sem:2, code: "GE3271", name: "Engineering Practices Laboratory", credits: 2 },
+        { sem:2, code: "GE3272", name: "Communication Lab", credits: 2 },
+        { sem:2, code: "HS3252", name: "Professional English - II", credits: 2 },
+        { sem:2, code: "MA3251", name: "Statistics and Numerical Methods", credits: 4 },
+        { sem:2, code: "PH3256", name: "Physics for Information Science", credits: 3 }
     ],
     3: [
-        { code: "AD3351", name: "Design and Analysis of Algorithms", credits: 4 },
-        { code: "AD3491", name: "Fundamentals of Data Science and Analytics", credits: 3 },
-        { code: "CS3351", name: "Digital Principles and Computer Organization", credits: 4 },
-        { code: "CS3381", name: "Object-Oriented Programming Laboratory", credits: 1.5 },
-        { code: "CS3391", name: "Object-Oriented Programming", credits: 3 },
-        { code: "CW3301", name: "Fundamentals of Economics", credits: 3 },
-        { code: "CW3311", name: "Business Communication Laboratory I", credits: 1.5 },
-        { code: "GE3361", name: "Professional Development", credits: 1 },
-        { code: "MA3354", name: "Discrete Mathematics", credits: 4 }
+        { sem:3, code: "AD3351", name: "Design and Analysis of Algorithms", credits: 4 },
+        { sem:3, code: "AD3491", name: "Fundamentals of Data Science and Analytics", credits: 3 },
+        { sem:3, code: "CS3351", name: "Digital Principles and Computer Organization", credits: 4 },
+        { sem:3, code: "CS3381", name: "Object-Oriented Programming Laboratory", credits: 1.5 },
+        { sem:3, code: "CS3391", name: "Object-Oriented Programming", credits: 3 },
+        { sem:3, code: "CW3301", name: "Fundamentals of Economics", credits: 3 },
+        { sem:3, code: "CW3311", name: "Business Communication Laboratory I", credits: 1.5 },
+        { sem:3, code: "GE3361", name: "Professional Development", credits: 1 },
+        { sem:3, code: "MA3354", name: "Discrete Mathematics", credits: 4 }
     ],
     4: [
-        { code: "AD3461", name: "Machine Learning Laboratory", credits: 2 },
-        { code: "AL3451", name: "Machine Learning", credits: 3 },
-        { code: "AL3452", name: "Operating Systems", credits: 4 },
-        { code: "CS3481", name: "Database Management Systems Laboratory", credits: 1.5 },
-        { code: "CS3492", name: "Database Management Systems", credits: 3 },
-        { code: "CW3401", name: "Introduction to Business Systems", credits: 3 },
-        { code: "CW3411", name: "Business Communication Laboratory II", credits: 1.5 },
-        { code: "GE3451", name: "Environmental Sciences and Sustainability", credits: 2 },
-        { code: "MA3391", name: "Probability and Statistics", credits: 4 }
+        { sem:4, code: "AD3461", name: "Machine Learning Laboratory", credits: 2 },
+        { sem:4, code: "AL3451", name: "Machine Learning", credits: 3 },
+        { sem:4, code: "AL3452", name: "Operating Systems", credits: 4 },
+        { sem:4, code: "CS3481", name: "Database Management Systems Laboratory", credits: 1.5 },
+        { sem:4, code: "CS3492", name: "Database Management Systems", credits: 3 },
+        { sem:4, code: "CW3401", name: "Introduction to Business Systems", credits: 3 },
+        { sem:4, code: "CW3411", name: "Business Communication Laboratory II", credits: 1.5 },
+        { sem:4, code: "GE3451", name: "Environmental Sciences and Sustainability", credits: 2 },
+        { sem:4, code: "MA3391", name: "Probability and Statistics", credits: 4 }
     ]
 },
 '2023-2027': {
@@ -103,9 +103,10 @@ function updateSubjects() {
 
     if (batch && semester) {
         const subjects = subjectsData[batch]?.[semester] || [];
-        let table = '<table><tr><th>Code</th><th>Name</th><th>Grade</th><th>Credits</th></tr>';
+        let table = '<table><tr><th>Sem</th><th>Code</th><th>Name</th><th>Grade</th><th>Credits</th></tr>';
         subjects.forEach((sub, index) => {
             table += `<tr>
+                <td>${sub.sem}</td>
                 <td>${sub.code}</td>
                 <td>${sub.name}</td>
                 <td><select id='grade-${index}'>
@@ -247,7 +248,7 @@ function updateChart(registerNumber) {
                         display: true,
                         text: 'SGPA (Grade Points)'
                     },
-                    min: 1,  // Start at 1 for SGPA scale
+                    min: 0,  // Start at 0 for SGPA scale
                     max: 10, // End at 10 for SGPA scale
                     ticks: {
                         stepSize: 1 // Increment by 1 on y-axis
