@@ -103,8 +103,9 @@ function updateSubjects() {
 
     if (batch && semester) {
         const subjects = subjectsData[batch]?.[semester] || [];
-        let table = '<table><tr><th>Sem</th><th>Code</th><th>Subject Name</th><th>Grade</th><th>Credits</th></tr>';
+        let table = '<table><h3>Subjects and Grades</h3><tr><th>Sem</th><th>Code</th><th>Subject Name</th><th>Grade</th><th>Credits</th></tr>';
         subjects.forEach((sub, index) => {
+            
             table += `<tr>
                 <td>${sub.sem}</td>
                 <td>${sub.code}</td>
@@ -121,8 +122,11 @@ function updateSubjects() {
                 <td>${sub.credits}</td>
             </tr>`;
         });
+        
         table += '</table>';
         subjectListDiv.innerHTML = table;
+
+        
     }
 }
 
@@ -171,14 +175,14 @@ function displayHistory(registerNumber) {
     const historyDiv = document.getElementById('semesterHistory');
     historyDiv.innerHTML = '<h4></h4>';
     if (sgpaData.length > 0) {
-        let table = '<table><tr><th>Semester</th><th>SGPA</th><th class="deltd">Delete</th></tr>';
+        let table = '<table><tr><th>Semester</th><th>SGPA</th><th class="deltd">Action</th></tr>';
         sgpaData.forEach((s, index) => {
             table += `
                 <tr>
                     <td>${s.semester}</td>
                     <td>${s.sgpa}</td>
                     <td class="deltd">
-                        <button class="delete-btn" onclick="deleteSemester(${index})">❌</button>
+                        <button class="delete-btn" onclick="deleteSemester(${index})">🗑️</button>
                     </td>
                 </tr>`;
         });

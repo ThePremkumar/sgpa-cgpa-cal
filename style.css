@@ -17,13 +17,13 @@ body {
 .container {
     max-width: 800px;
     margin: auto;
-    background: #fff;
+    background: rgb(242, 224, 224);
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    background: #C6FFDD;  
+    /* background: #C6FFDD;  
     background: -webkit-linear-gradient(to left, #f7797d, #FBD786, #C6FFDD); 
-    background: linear-gradient(to left, #f7797d, #FBD786, #C6FFDD); 
+    background: linear-gradient(to left, #f7797d, #FBD786, #C6FFDD);  */
     
     
 }
@@ -117,21 +117,21 @@ button {
     flex: 0 0 150px;
     height: 50px;
     color:black;
-    border: none;
+    border: 2px solid black;
     border-radius: 500px;
     cursor: pointer;
-    font-size: 16px;
+    /* font-size: 16px; */
     padding: 12px 24px;
     margin-right: 5px;
-    background: #2c4c5163; 
-    background: -webkit-linear-gradient(to left, #C4E0E5, #ca43ba); 
-    background: linear-gradient(to left, #C4E0E5, #82d04370); 
+    background: transparent;
+    /* background: -webkit-linear-gradient(to left, #C4E0E5, #ca43ba); 
+    background: linear-gradient(to left, #C4E0E5, #82d04370);  */
     transition: background-color 0.4s ease, transform 0.3s ease;
 
 }
 button:hover {
   color: rgb(0, 0, 5); 
-  background: linear-gradient(to left, #c26d6d, #de86d7); 
+  background: rgb(147, 245, 0); 
   transform: scale(1.1); 
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
 }
@@ -177,7 +177,7 @@ th {
 }
 
 .linkedin{
-    max-width: 800px;
+    max-width: 500px;
     margin: auto;
     padding: 20px;
     border-radius: 8px;
@@ -212,33 +212,33 @@ color: white;
 .delete-btn {
     background: transparent;
     border: none; 
-    width: 50px; 
-    height: 50px;
-    border-radius: 50%;
+    width: 25px; 
+    height: 25px;
+    
     color: red;
-    font-size: 18px;
+    
     cursor: pointer; 
     transition: color 0.3s ease;
     text-align: center;
     justify-items: center;
     align-items: center;
+   
 }
 
 .delete-btn:hover{
-  background: black;
+  background: transparent;
   border: none;
-  color: rgb(39, 201, 21);
-  transform: scale(1.05);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  color: rgb(251, 251, 251);
+  transform: none;
+  box-shadow: none;
+  /* font-size: ; */
 }
 
-.pk{
+/* .pk{
 
-}
+} */
 
-.deltd{
-  border: none;
-}
+
 
 
 .form-container {
@@ -251,7 +251,7 @@ color: white;
   line-height: 1.6;
 }
 
-.form-container,input, textarea {
+.form-container input textarea {
   width: 100%;
   padding: 10px;
   margin-top: 5px;
@@ -260,42 +260,46 @@ color: white;
   font-size: 1rem;
 }
 
-.form-container,h2 {
+.form-container h2 {
   text-align: center;
   color: #007BFF;
   margin-bottom: 20px;
 }
 
-.form-container,label {
+.form-container label {
   display: block;
   margin-top: 10px;
   font-weight: bold;
 }
 
-.form-container,textarea {
+.form-container textarea {
   resize: none;
 }
 
 
-.form-container,button {
+.form-container button {
   
-  width: 100%;
+  width: 200px;
+  height: auto;
   margin-top: 15px;
   padding: 10px;
   font-size: 1rem;
   color: #fff;
   background-color: #007BFF;
   border: none;
-  border-radius: 5px;
+  border-radius: 50px;
   cursor: pointer;
   transition: background-color 0.3s;
+  align-items: center;
+  justify-content: center;
 }
 
-.form-container,button:hover {
-  background-color: #0056b3;
+.form-container button:hover {
+  background-color: #fff;
+  color: black;
 }
 
-.form-container,button:active {
+.form-container button:active {
   transform: scale(0.98);
 }
 
@@ -334,6 +338,9 @@ color: white;
   }
 
 
+}
+
+
 @media screen and (min-width: 600px) and (max-width:1080px){
   body{
     background-color: rebeccapurple;
@@ -351,16 +358,17 @@ color: white;
     width: 90%; 
     margin: 0 auto;
     border-collapse: collapse;
-    display: flex;
+    display: block;
     justify-content: center;
     align-items: center;
     }
-
 
   th, td {
     padding: 8px;
     font-size: 14px;
   }
+
+  
 }
 
  
@@ -410,4 +418,4 @@ color: white;
       padding: 6px;
       font-size: 12px; 
     }
-}
+  }
