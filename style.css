@@ -311,6 +311,28 @@ transform: scale(0.98);
 
 
 
+.counter-panel{
+  display: block;
+  margin-top: 30px;
+  margin-bottom: 50px;
+
+}
+.count{
+display: flex;
+justify-content: center;
+align-items: center;
+margin-top: 10px;
+}
+
+.border{
+border: 1.5px solid transparent;
+}
+
+
+
+
+
+
 /* ||SMALL */
 @media screen and (min-width: 320px) and (max-width:576px){
 body{
@@ -428,31 +450,3 @@ body{
 
 
 
-
-
-.counter-panel{
-    display: block;
-    margin-top: 30px;
-    margin-bottom: 50px;
-
-}
-.count{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  left: 250px;
-}
-
-.border{
-  border: 1.5px solid transparent;
-  width: 200px;
-  height: 70px;
-  display: flex;
-  justify-content: center;
-}
-
-.border:hover{
-  border: 1.5px solid whitesmoke;
-  color: chartreuse;
-}
