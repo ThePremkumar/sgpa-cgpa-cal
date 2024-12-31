@@ -119,8 +119,11 @@ max-width: 200px;
 margin: 10px auto; 
 display: block; 
 }
+
+
 button {
   flex: 0 0 150px;
+  width: auto;
   height: 50px;
   color:black;
   border: 2px solid black;
