@@ -44,6 +44,14 @@ const subjectsData = {
         { sem:4, code: "CW3411", name: "Business Communication Laboratory II", credits: 1.5 },
         { sem:4, code: "GE3451", name: "Environmental Sciences and Sustainability", credits: 2 },
         { sem:4, code: "MA3391", name: "Probability and Statistics", credits: 4 }
+    ],
+    5: [
+        { sem:5, code: "CW3551", name: "Data and Information Security", credits: 3 },
+        { sem:5, code: "CW3501", name: "Fundamentals of Management", credits: 3 },
+        { sem:5, code: "CCS336", name: "Cloud Service Management", credits: 3 },
+        { sem:5, code: "CCS346", name: "Exploratory Data Analysis", credits: 3 },
+        { sem:5, code: "CS3691", name: "Embedded Systems and IoT", credits: 4 },
+        { sem:5, code: "CW3511", name: "Summer Internship", credits: 2 },
     ]
 },
 '2023-2027': {
