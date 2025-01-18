@@ -221,6 +221,11 @@ button{
     margin-top: 0;
   }
 
+  canvas{
+    height: auto; 
+    width: auto;
+  }
+
 }
 
 /* lagre */

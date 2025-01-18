@@ -250,7 +250,7 @@ function updateChart(registerNumber) {
             datasets: [{
                 label: 'SGPA Trend',
                 data: data,
-                borderColor: 'rgba(75, 192, 192, 1)',
+                borderColor: 'rgb(31, 61, 61)',
                 borderWidth: 2,
                 fill: false
             }]
