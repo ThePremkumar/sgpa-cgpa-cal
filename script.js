@@ -111,7 +111,7 @@ function updateSubjects() {
 
     if (batch && semester) {
         const subjects = subjectsData[batch]?.[semester] || [];
-        let table = '<table><h3>Subjects and Grades</h3><tr><th>Sem</th><th>Code</th><th>Subject Name</th><th>Grade</th><th>Credits</th></tr>';
+        let table = '<table><h3 class="text-center my-5">Subjects and Grades</h3><tr><th>Sem</th><th>Code</th><th>Subject Name</th><th>Grade</th><th>Credits</th></tr>';
         subjects.forEach((sub, index) => {
             
             table += `<tr>
@@ -132,8 +132,12 @@ function updateSubjects() {
         });
         
         table += '</table>';
-        subjectListDiv.innerHTML = table;
-
+        subjectListDiv.innerHTML = table ;
+        document.getElementById('button').innerHTML = `<div class="button-row text-center my-5">
+            <button class="btn btn-outline-success justify-content-center mb-4" type="button" onclick="calculateSGPA()">Calculate SGPA</button>
+            <button class="btn btn-outline-info justify-content-center mb-4" type="button" onclick="addSemester()">Add Next Semester</button>
+            </div>
+        </div>`;
         
     }
 }
@@ -181,16 +185,16 @@ function calculateCGPA(registerNumber) {
 function displayHistory(registerNumber) {
     const sgpaData = getSGPAData(registerNumber);
     const historyDiv = document.getElementById('semesterHistory');
-    historyDiv.innerHTML = '<h4></h4>';
+    historyDiv.innerHTML = '<h3 class="text-center my-5">Semester History</h3>';
     if (sgpaData.length > 0) {
-        let table = '<table><tr><th>Semester</th><th>SGPA</th><th class="deltd">Action</th></tr>';
+        let table = '<table class="justify-content-center"><tr><th>Semester</th><th>SGPA</th><th class="deltd">Action</th></tr>';
         sgpaData.forEach((s, index) => {
             table += `
                 <tr>
                     <td>${s.semester}</td>
                     <td>${s.sgpa}</td>
                     <td class="deltd">
-                        <button class="delete-btn" onclick="deleteSemester(${index})">🗑️</button>
+                        <button type="button" class="delete-btn btn-close" aria-label="Close" onclick="deleteSemester(${index})"></button>
                     </td>
                 </tr>`;
         });
@@ -228,11 +232,15 @@ function addSemester() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
+
+
+
 function updateChart(registerNumber) {
     const sgpaData = getSGPAData(registerNumber);
     const ctx = document.getElementById('sgpaChart').getContext('2d');
     const labels = sgpaData.map(s => `Semester ${s.semester}`);
     const data = sgpaData.map(s => s.sgpa);
+    document.getElementById("graph").innerHTML = '<h3 class="text-center">SGPA Line Graph</h3>';
 
     if (chart) chart.destroy();
     chart = new Chart(ctx, {
