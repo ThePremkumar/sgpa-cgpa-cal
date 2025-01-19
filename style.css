@@ -9,6 +9,13 @@ html, body {
   overflow-x: hidden;
 }
 
+a{
+  text-decoration: none !important;
+}
+
+a:hover{
+  color: rgb(255, 0, 111);
+}
 
 .img{
   background-image: url("img/Picsart_25-01-18_18-57-48-929.svg");
