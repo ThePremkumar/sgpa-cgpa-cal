@@ -244,11 +244,15 @@ button{
     margin-top: 0;
   }
 
-canvas{
+  canvas{
     height: auto; 
     width: auto;
     padding-right: 0;
   }
+  .container{
+    background-size: auto;
+  }
+
 
 }
 
