@@ -250,12 +250,14 @@ function updateChart(registerNumber) {
             datasets: [{
                 label: 'SGPA Trend',
                 data: data,
-                borderColor: 'rgb(31, 61, 61)',
+                borderColor: 'rgb(27, 230, 37)',
                 borderWidth: 2,
                 fill: false
             }]
         },
         options: {
+            responsive: true,
+            maintainAspectRatio: false,
             scales: {
                 x: {
                     title: {
@@ -298,7 +300,7 @@ window.onload = () => {
     }
 };
 
-
+////function for send message through the e-mail
 
 document.getElementById('email-form').addEventListener('submit', function(event) {
     // Capture input values
