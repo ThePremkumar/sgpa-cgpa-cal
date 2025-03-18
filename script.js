@@ -78,7 +78,7 @@ const subjectsData = {
         { sem:2, code: "PUCC2PL04", name: "Problem Solving using Python Programming Laboratory", credits: 2 },
         { sem:2, code: "PUCC2PL05", name: "Civil and Mechanical Engineering Practices", credits: 1 },
         { sem:2, code: "PUCC2PL06", name: "Electrical and Electronics Engineering Preactices", credits: 1 },
-        { sem:2, code: "PUCC2HM06", name: "Wellness", credits: 0 },
+        // { sem:2, code: "PUCC2HM06", name: "Wellness", credits: 0 },
     ],
     3: [
         { sem:3, code: "PUCB3BS09", name: "Discrete Mathematics", credits: 4 },
