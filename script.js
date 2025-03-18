@@ -64,7 +64,7 @@ const subjectsData = {
         { sem:1,  code: "PUCC1HM02", name: "Heritage of Tamil", credits: 1 },
         { sem:1,  code: "PUCC1PL01", name: "Professional English - I(Lab)", credits: 2 },
         { sem:1,  code: "PUCC1PL02", name: "Physics and Chemistry Laboratory", credits: 2 },
-        { sem:1,  code: "PUCC1HM03", name: "Wellness", credits: 0 }
+        // { sem:1,  code: "PUCC1HM03", name: "Wellness", credits: 0 }
     ],
     2: [
         { sem:2, code: "PUCC2HMO4", name: "Professional English - II", credits: 2 },
