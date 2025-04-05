@@ -83,7 +83,7 @@ const subjectsData = {
     ],
     3: [
       {sem: 3,code: "PUAD2BE03",name: "Fundamentals of Data Science and Analytics",credits: 3},
-      {sem: 3,code: "PUAD3PL02",name: "Fundamentals of Data Science and Analytics Laboratory",credits: 4},
+      {sem: 3,code: "PUAD3PL02",name: "Fundamentals of Data Science and Analytics Laboratory",credits: 2},
       {sem: 3,code: "PUCB3BS09",name: "Discrete Mathematics", credits: 4 },
       {sem: 3,code: "PUCB3PL01",name: "Business Communication Laboratory",credits: 1,},
       {sem: 3,code: "PUCC3HM07",name: "Extension Activities", credits: 0 },
