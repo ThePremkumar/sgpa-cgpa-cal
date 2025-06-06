@@ -225,23 +225,48 @@ canvas{
 /* Mobile Responsive Styles */
 @media screen and (min-width: 320px) and (max-width: 576px) {
   
-  /* Mobile Table Container */
+  /* Mobile Table Container - Different behavior for different tables */
   .table-responsive {
     margin: 10px -15px; /* Extend to edges on mobile */
     border-radius: 0;
     box-shadow: none;
   }
   
-  /* Mobile Table Styling */
-  #subjectList table, #semesterHistory table {
+  /* Subject List Table - Keep scrollable */
+  #subjectList table {
     min-width: 500px; /* Ensure minimum width for proper display */
     width: auto;
     margin: 0;
     border-radius: 0;
   }
   
-  #subjectList th, #subjectList td,
-  #semesterHistory th, #semesterHistory td {
+  /* Semester History Table - Make it fit without scroll */
+  #semesterHistory table {
+    width: 100% !important;
+    min-width: auto !important;
+    margin: 0;
+    border-radius: 0;
+    table-layout: fixed; /* Fixed layout for better control */
+  }
+  
+  /* Semester History Column Widths */
+  #semesterHistory th:nth-child(1), #semesterHistory td:nth-child(1) {
+    width: 35%; /* Semester column */
+  }
+  
+  #semesterHistory th:nth-child(2), #semesterHistory td:nth-child(2) {
+    width: 25%; /* SGPA column */
+  }
+  
+  #semesterHistory th:nth-child(3), #semesterHistory td:nth-child(3) {
+    width: 25%; /* Overall CGPA column */
+  }
+  
+  #semesterHistory th:nth-child(4), #semesterHistory td:nth-child(4) {
+    width: 15%; /* CGPA Percentage column */
+  }
+  
+  #subjectList th, #subjectList td {
     padding: 8px 6px;
     font-size: 12px;
     white-space: nowrap;
@@ -251,7 +276,11 @@ canvas{
   /* Specific styling for semester history on mobile */
   #semesterHistory th, #semesterHistory td {
     font-size: 11px;
-    padding: 6px 4px;
+    padding: 6px 3px;
+    border: 1px solid #ddd;
+    text-align: center;
+    word-wrap: break-word;
+    white-space: normal; /* Allow text wrapping if needed */
   }
   
   /* Make important columns slightly wider */
@@ -263,8 +292,13 @@ canvas{
     min-width: 80px; /* Semester column */
   }
   
-  /* Scroll indicator for mobile tables */
-  .table-responsive::after {
+  /* Remove scroll indicator for semester history table */
+  #semesterHistory .table-responsive::after {
+    display: none !important;
+  }
+  
+  /* Keep scroll indicator only for subject list */
+  #subjectList .table-responsive::after {
     content: '← Swipe to see more →';
     position: absolute;
     bottom: 5px;
@@ -277,11 +311,6 @@ canvas{
     pointer-events: none;
     opacity: 0.7;
     z-index: 5;
-  }
-  
-  /* Hide scroll indicator when not needed */
-  .table-responsive:not([scrollable])::after {
-    display: none;
   }
   
   /* Button adjustments for mobile */
@@ -333,19 +362,24 @@ canvas{
 /* Extra small devices (phones in portrait) */
 @media screen and (max-width: 400px) {
   
-  #subjectList table, #semesterHistory table {
+  #subjectList table {
     min-width: 450px;
   }
   
-  #subjectList th, #subjectList td,
-  #semesterHistory th, #semesterHistory td {
+  /* Semester History - Keep fitted to screen */
+  #semesterHistory table {
+    width: 100% !important;
+    min-width: auto !important;
+  }
+  
+  #subjectList th, #subjectList td {
     padding: 6px 4px;
     font-size: 11px;
   }
   
   #semesterHistory th, #semesterHistory td {
     font-size: 10px;
-    padding: 5px 3px;
+    padding: 4px 2px;
   }
   
   button {
