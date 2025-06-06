@@ -179,8 +179,6 @@ function handleRegisterChange() {
 }
 
 
-
-
 function validateRegister() {
   const registerInput = document.getElementById("registerNumber").value.trim();
   if (!registerInput || registerInput <= 0) {
@@ -237,7 +235,7 @@ function updateSubjects() {
   if (batch && semester) {
     const subjects = subjectsData[batch]?.[semester] || [];
     let table =
-      '<table><h3 class="text-center my-5">Subjects and Grades</h3><tr><th>Sem</th><th>Code</th><th>Subject Name</th><th>Grade</th><th>Credits</th></tr>';
+      '<table><h3 class="text-center my-5"><i class="fas fa-book"></i> Subjects and Grades</h3><tr><th>Sem</th><th>Code</th><th>Subject Name</th><th>Grade</th><th>Credits</th></tr>';
     subjects.forEach((sub, index) => {
       table += `<tr>
                 <td>${sub.sem}</td>
@@ -261,8 +259,8 @@ function updateSubjects() {
     document.getElementById(
       "button"
     ).innerHTML = `<div class="button-row text-center my-5">
-            <button class="btn btn-outline-success justify-content-center mb-4" type="button" onclick="calculateSGPA()">Calculate SGPA</button>
-            <button class="btn btn-outline-info justify-content-center mb-4" type="button" onclick="addSemester()">Add Next Semester</button>
+            <button class="btn btn-outline-success justify-content-center mb-4" type="button" onclick="calculateSGPA()"><i class="fas fa-calculator"></i> Calculate SGPA</button>
+            <button class="btn btn-outline-info justify-content-center mb-4" type="button" onclick="addSemester()"><i class="fas fa-plus"></i> Add Next Semester</button>
             </div>
         </div>`;
   }
@@ -310,34 +308,63 @@ function calculateCGPA(registerNumber) {
 }
 
 function displayHistory(registerNumber) {
-  const sgpaData = getSGPAData(registerNumber);
-  const historyDiv = document.getElementById("semesterHistory");
-  historyDiv.innerHTML = '<h3 class="text-center my-5">Semester History</h3>';
-  if (sgpaData.length > 0) {
-    let table =
-      '<table class="justify-content-center"><tr><th>Semester</th><th>SGPA</th><th class="deltd">Action</th></tr>';
-    sgpaData.forEach((s, index) => {
-      table += `
-                <tr>
-                    <td>${s.semester}</td>
-                    <td>${s.sgpa}</td>
-                    <td class="deltd">
-                        <button type="button" class="delete-btn btn-close" aria-label="Close" onclick="deleteSemester(${index})"></button>
-                    </td>
-                </tr>`;
-    });
-    const cgpa = calculateCGPA(registerNumber);
-    const cgpaPercentage = (parseFloat(cgpa) / 10) * 100;
-    table += `<tr><th>Overall CGPA</th><th>${cgpa}</th></tr>`;
-    table += `<tr><th>CGPA Percentage</th><th>${cgpaPercentage.toFixed(
-      2
-    )}%</th></tr>`; // Display percentage
-    table += "</table>";
-    historyDiv.innerHTML += table;
-  } else {
-    historyDiv.innerHTML += "<p>No history available.</p>";
-  }
-}
+            const sgpaData = getSGPAData(registerNumber);
+            const historyDiv = document.getElementById("semesterHistory");
+            
+            if (sgpaData.length > 0) {
+                let historyHTML = `
+                    <h3 class="text-center my-4"><i class="fas fa-history"></i> Semester History</h3>
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Semester</th>
+                                    <th>SGPA</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                `;
+                
+                sgpaData.forEach((s, index) => {
+                    historyHTML += `
+                        <tr>
+                            <td>Semester ${s.semester}</td>
+                            <td>${s.sgpa}</td>
+                            <td>
+                                <button type="button" class="delete-btn btn-close" aria-label="Close" onclick="deleteSemester(${index})"></button>
+                            </td>
+                        </tr>
+                    `;
+                });
+                
+                const cgpa = calculateCGPA(registerNumber);
+                const cgpaPercentage = (parseFloat(cgpa) / 10) * 100;
+                
+                historyHTML += `
+                            <tr class="table-success">
+                                <th>Overall CGPA</th>
+                                <th>${cgpa}</th>
+                                <th></th>
+                            </tr>
+                            <tr class="table-info">
+                                <th>CGPA Percentage</th>
+                                <th>${cgpaPercentage.toFixed(2)}%</th>
+                                <th></th>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                `;
+                
+                historyDiv.innerHTML = historyHTML;
+            } else {
+                historyDiv.innerHTML = `
+                    <h3 class="text-center my-4"><i class="fas fa-history"></i> Semester History</h3>
+                    <div class="alert alert-info text-center">No history available.</div>
+                `;
+            }
+        }
 
 function deleteSemester(index) {
   const registerNumber = document.getElementById("registerNumber").value.trim();
@@ -353,11 +380,28 @@ function deleteSemester(index) {
 }
 
 function addSemester() {
-  const semesterSelect = document.getElementById("semester");
-  semesterSelect.selectedIndex++;
-  updateSubjects();
-  document.getElementById("sgpaResult").innerText = "";
-  window.scrollTo({ top: 0, behavior: "smooth" });
+  const batch = document.getElementById("batch").value;
+  const currentSemester = parseInt(document.getElementById("semester").value);
+  
+  if (!batch || !currentSemester) {
+    alert("Please select batch and semester first");
+    return;
+  }
+  
+  // Get available semesters for the selected batch
+  const availableSemesters = Object.keys(subjectsData[batch]).map(s => parseInt(s)).sort((a, b) => a - b);
+  
+  // Find next available semester
+  const nextSemester = availableSemesters.find(sem => sem > currentSemester);
+  
+  if (nextSemester) {
+    document.getElementById("semester").value = nextSemester;
+    updateSubjects();
+    document.getElementById("sgpaResult").innerText = "";
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  } else {
+    alert("No more semesters available for this batch");
+  }
 }
 
 function updateChart(registerNumber) {
