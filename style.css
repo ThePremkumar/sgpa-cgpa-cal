@@ -4,7 +4,6 @@
   box-sizing: border-box;
 }
 
-
 html, body {
   overflow-x: hidden;
 }
@@ -25,7 +24,6 @@ a:hover{
   filter: grayscale(100%) brightness(0) invert(0);  
 }
 
-
 nav{
   margin-bottom: 3rem;
 }
@@ -37,8 +35,6 @@ nav{
 .navbar-nav{
   gap: 10px;
 }
-
-
 
 .container{
   max-width: 576px !important;
@@ -68,7 +64,7 @@ h1 {
   color: #333;
   margin-bottom: 20px;
   animation: slideInFromTop 1s ease-in-out;
-  }
+}
   
 h2, h3, h4 {
   text-align: center;
@@ -122,58 +118,68 @@ p {
   }
 }
 
-
 label {
   display: block;
   margin: 10px 0 5px;
   font-weight: bold;
 }
+
 input, select, button {
-padding: 8px;
-margin: 5px 0;
-box-sizing: border-box;
-border-radius: 10px;
+  padding: 8px;
+  margin: 5px 0;
+  box-sizing: border-box;
+  border-radius: 10px;
 }
   
 #registerNumber{
-width: 40%;
+  width: 40%;
 }
 
 button:active {
   transform: scale(0.95); 
 }
-    
-#subjectList table {
+
+/* Improved Table Styling for Desktop */
+#subjectList table, #semesterHistory table {
   width: 100%;
   border-collapse: collapse;
   margin: 10px 0;
-}
-#subjectList th, #subjectList td {
-  border: 1px solid #1b1919;
-  padding: 8px;
-  text-align: center;
-}
-#subjectList th {
-  color: hsl(243, 85%, 44%);
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
-#semesterHistory table{
-  width: 100%;
-  border-collapse: collapse;
-  margin: 10px 0;
-}
-
+#subjectList th, #subjectList td,
 #semesterHistory th, #semesterHistory td {
-  border: 1px solid #1b1919;
-  padding: 8px;
+  border: 1px solid #ddd;
+  padding: 12px 8px;
   text-align: center;
-}
-#semesterHistory th {
-  color: hsl(243, 85%, 44%);
+  font-size: 14px;
 }
 
+#subjectList th, #semesterHistory th {
+  /* background-color: #007bff; */
+  color: #007bff;
+  font-weight: 600;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
 
+#subjectList tbody tr:hover,
+#semesterHistory tbody tr:hover {
+  background-color: #f8f9fa;
+}
 
+/* Table Container for Mobile Scrolling */
+.table-responsive {
+  position: relative;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border-radius: 8px;
+  margin: 10px 0;
+}
 
 .contact,.connection{
   max-width: 576px !important;
@@ -182,22 +188,20 @@ button:active {
   margin-top: 100px;
   background: none;
 }
+
 .connection ul{
   padding-left: 32px !important;
 }
+
 ul{
   list-style: none;
 }
-
-
-
 
 footer{
   margin-top: 3rem;
 }
 
-
-.button-row  .btn-outline-success{
+.button-row .btn-outline-success{
   margin-right: 9px;
 }
 
@@ -218,73 +222,179 @@ canvas{
   cursor: pointer;
 }
 
-
-
-@media screen and (min-width: 320px) and (max-width:576px){
-
-table {
-  width: 100%;
-  display: flex;
-  overflow-x: auto;
-  white-space: wrap;
-  display: flex;
-  align-items: center;
-}
-
-th, td {
-  padding: 6px;
-  font-size: 12px;
-}
-
-#semesterHistory th, #semesterHistory td{
-  font-size: 20px;
-}
-
-button{
-  flex: 0 0 110px;
-}
-.button-row button{
-  gap: 10px;
-}
-
-#registerNumber{
-  width: 65%;
+/* Mobile Responsive Styles */
+@media screen and (min-width: 320px) and (max-width: 576px) {
+  
+  /* Mobile Table Container */
+  .table-responsive {
+    margin: 10px -15px; /* Extend to edges on mobile */
+    border-radius: 0;
+    box-shadow: none;
   }
-
-  .navbar{
+  
+  /* Mobile Table Styling */
+  #subjectList table, #semesterHistory table {
+    min-width: 500px; /* Ensure minimum width for proper display */
+    width: auto;
+    margin: 0;
+    border-radius: 0;
+  }
+  
+  #subjectList th, #subjectList td,
+  #semesterHistory th, #semesterHistory td {
+    padding: 8px 6px;
+    font-size: 12px;
+    white-space: nowrap;
+    border: 1px solid #ddd;
+  }
+  
+  /* Specific styling for semester history on mobile */
+  #semesterHistory th, #semesterHistory td {
+    font-size: 11px;
+    padding: 6px 4px;
+  }
+  
+  /* Make important columns slightly wider */
+  #subjectList th:nth-child(2), #subjectList td:nth-child(2) {
+    min-width: 120px; /* Course name column */
+  }
+  
+  #semesterHistory th:nth-child(1), #semesterHistory td:nth-child(1) {
+    min-width: 80px; /* Semester column */
+  }
+  
+  /* Scroll indicator for mobile tables */
+  .table-responsive::after {
+    content: '← Swipe to see more →';
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+    background: rgba(0, 123, 255, 0.8);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 10px;
+    pointer-events: none;
+    opacity: 0.7;
+    z-index: 5;
+  }
+  
+  /* Hide scroll indicator when not needed */
+  .table-responsive:not([scrollable])::after {
+    display: none;
+  }
+  
+  /* Button adjustments for mobile */
+  button {
+    flex: 0 0 auto;
+    min-width: 100px;
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+  
+  .button-row button {
+    margin: 5px 5px 5px 0;
+  }
+  
+  #registerNumber {
+    width: 65%;
+  }
+  
+  .navbar {
     margin-bottom: 0;
   }
-  footer{
+  
+  footer {
     margin-top: 0;
   }
-
-  canvas{
+  
+  canvas {
     height: auto; 
     width: auto;
     padding-right: 0;
   }
-  .container{
+  
+  .container {
     background-size: auto;
   }
-
-
-}
-
-/* lagre */
-@media screen and (min-width: 600px) and (max-width:1080px){
-  table {
-    width: 90%; 
-    margin: 0 auto;
-    border-collapse: collapse;
-    display: block;
-    justify-content: center;
-    align-items: center;
-  }
-
-  th, td {
-    padding: 8px;
+  
+  /* Improve form spacing on mobile */
+  input, select {
+    margin: 3px 0;
     font-size: 14px;
   }
+  
+  label {
+    margin: 8px 0 3px;
+    font-size: 14px;
+  }
+}
 
+/* Extra small devices (phones in portrait) */
+@media screen and (max-width: 400px) {
+  
+  #subjectList table, #semesterHistory table {
+    min-width: 450px;
+  }
+  
+  #subjectList th, #subjectList td,
+  #semesterHistory th, #semesterHistory td {
+    padding: 6px 4px;
+    font-size: 11px;
+  }
+  
+  #semesterHistory th, #semesterHistory td {
+    font-size: 10px;
+    padding: 5px 3px;
+  }
+  
+  button {
+    min-width: 90px;
+    font-size: 11px;
+    padding: 5px 10px;
+  }
+}
 
+/* Tablet and larger mobile devices */
+@media screen and (min-width: 600px) and (max-width: 1080px) {
+  
+  .table-responsive {
+    overflow-x: visible;
+  }
+  
+  #subjectList table, #semesterHistory table {
+    width: 90%;
+    margin: 10px auto;
+    min-width: auto;
+  }
+  
+  #subjectList th, #subjectList td,
+  #semesterHistory th, #semesterHistory td {
+    padding: 10px 8px;
+    font-size: 14px;
+  }
+}
+
+/* Utility class to wrap tables in responsive container */
+.mobile-table-wrapper {
+  position: relative;
+}
+
+/* Custom scrollbar for webkit browsers */
+.table-responsive::-webkit-scrollbar {
+  height: 6px;
+}
+
+.table-responsive::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.table-responsive::-webkit-scrollbar-thumb {
+  background: #007bff;
+  border-radius: 3px;
+}
+
+.table-responsive::-webkit-scrollbar-thumb:hover {
+  background: #0056b3;
 }
