@@ -178,15 +178,8 @@ function handleRegisterChange() {
   }
 }
 
-function resetSemesterAndSubjects() {
-  // Reset semester to default (deselect)
-  document.getElementById("semester").value = "";
 
-  // Clear subject list
-  document.getElementById("subjectList").innerHTML = "";
 
-  // Check if register number is entered
-}
 
 function validateRegister() {
   const registerInput = document.getElementById("registerNumber").value.trim();
@@ -195,6 +188,44 @@ function validateRegister() {
     document.getElementById("batch").value = "";
     return;
   }
+}
+
+function handleBatchChange() {
+  validateRegister();
+  updateSemesterOptions();
+  resetSemesterAndSubjects();
+}
+
+function updateSemesterOptions() {
+  const batch = document.getElementById("batch").value;
+  const semesterSelect = document.getElementById("semester");
+  
+  // Clear existing options
+  semesterSelect.innerHTML = '<option value="">--Select Semester--</option>';
+  
+  if (batch && subjectsData[batch]) {
+    // Get available semesters for the selected batch
+    const availableSemesters = Object.keys(subjectsData[batch]).sort((a, b) => parseInt(a) - parseInt(b));
+    
+    // Add options for available semesters only
+    availableSemesters.forEach(semester => {
+      const option = document.createElement('option');
+      option.value = semester;
+      option.textContent = `Semester ${semester}`;
+      semesterSelect.appendChild(option);
+    });
+  }
+}
+
+function resetSemesterAndSubjects() {
+  // Clear subject list
+  document.getElementById("subjectList").innerHTML = "";
+  
+  // Clear button section
+  document.getElementById("button").innerHTML = "";
+  
+  // Clear SGPA result
+  document.getElementById("sgpaResult").innerText = "";
 }
 
 function updateSubjects() {
