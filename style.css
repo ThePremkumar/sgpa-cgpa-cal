@@ -40,7 +40,7 @@ nav{
   max-width: 576px !important;
   height: auto;
   border-radius: 10px;
-  background: url('/img/bg.png');
+  background: url('img/bg.png');
   background-size: cover;
 }
 
