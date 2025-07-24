@@ -96,11 +96,12 @@
     <div class="row">
 
 
-      <div class="whatsapp text-end p-0">
+      <!-- <div class="whatsapp text-end p-0">
         <a href="https://wa.me/916369540320?text=Hi%20Prem%2C%20I%20saw%20your%20CGPA%20site%20and%20I%E2%80%99d%20like%20to%20know%20more%20about%20how%20it%20works.%20Can%20you%20help%20me%20with%20the%20details%3F" target="_blank" rel="noopener noreferrer">
           <img src="img/WhatsApp-logo.png" alt="Chat on WhatsApp" style="height:50px;">
         </a>
-      </div>
+      </div> -->
+      
 
 
       <div class="container rounded col-md-7">
@@ -229,7 +230,40 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    
+    <!-- chatBot -->
+    <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
+    <script type="module">
+      import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+
+      createChat({
+        webhookUrl: 'https://n8n-qkqplztg.ap-southeast-1.clawcloudrun.com/webhook/44caa21a-73c6-4411-8d40-7d08446ff936/chat',
+        webhookConfig: {
+          method: 'POST',
+          headers: {}
+        },
+        target: '#n8n-chat',
+        mode: 'window',
+        chatInputKey: 'chatInput',
+        chatSessionKey: 'sessionId',
+        loadPreviousSession: true,
+        metadata: {},
+        showWelcomeScreen: false,
+        defaultLanguage: 'en',
+        initialMessages: [
+          'Hi there! 👋',
+          'My name is Friday. How can I assist you today?'
+        ],
+        i18n: {
+          en: {
+            title: 'Hi there! 👋',
+            subtitle: "Start a chat. We're here to help you 24/7.",
+            footer: '',
+            getStarted: 'New Conversation',
+            inputPlaceholder: 'Type your question..',
+          },
+        },
+      });
+    </script>
 
     <!-- Microsoft Clarity Tracking (Optional) -->
     <script type="text/javascript">

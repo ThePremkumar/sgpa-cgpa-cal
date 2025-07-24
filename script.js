@@ -54,6 +54,16 @@ const subjectsData = {
       {sem: 5,code: "CW3551",name: "Data and Information Security",credits: 3},
       {sem: 5,code: "MX3084",name: "Disaster Risk Reduction and Management (Non-credit)",credits: 0},
     ],
+    6: [
+      {sem: 6, code: "CW3601", name: "Business Analytics", credits: 3 },
+      {sem: 6, code: "CCB331", name: "Marketing Research and Marketing Management", credits: 3 },
+      {sem: 6,code: "CW3007",name: "IT Project Management",credits: 3},
+      {sem: 6, code: "CCS356", name: "Object Oriented Software Engineering", credits: 3 },
+      {sem: 6, code: "CCS337", name: "Cognitive Science", credits: 3 },
+      {sem: 6,code: "OIE351",name: "Introduction to Industrial Engineering",credits: 3},
+      {sem: 6,code: "MX3086",name: "History of Science and Technology in India(Non-credit)",credits: 0},
+      {sem: 6, code: "CW3611", name: "Business Analytics Laboratory", credits: 2 }
+    ],
   },
   "2023-2027": {
     1: [
