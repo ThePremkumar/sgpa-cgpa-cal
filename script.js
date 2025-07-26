@@ -1,3 +1,7 @@
+alert("AI is now integrated into this site using the powerful Gemini 2.0 Flash model. Enjoy a smarter experience!");
+
+
+
 const subjectsData = {
   "2022-2026": {
     1: [
