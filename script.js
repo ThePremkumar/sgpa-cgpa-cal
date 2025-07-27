@@ -71,14 +71,14 @@ const subjectsData = {
   },
   "2023-2027": {
     1: [
-      {sem: 1,code: "PUCC1HM01",name: "Professional English - I",credits: 2},
+      { sem: 1,code: "PUCC1HM01",name: "Professional English - I",credits: 2},
       { sem: 1, code: "PUCC1BS01", name: "Matrices and Calculus", credits: 4 },
       { sem: 1, code: "PUCC1BS02", name: "Engineering Physics", credits: 3 },
       { sem: 1, code: "PUCC1BS03", name: "Engineering Chemistry", credits: 3 },
       { sem: 1, code: "PUCC1BE01", name: "Engineering Graphics", credits: 4 },
       { sem: 1, code: "PUCC1HM02", name: "Heritage of Tamil", credits: 1 },
-      {sem: 1,code: "PUCC1PL01",name: "Professional English - I(Lab)",credits: 2},
-      {sem: 1,code: "PUCC1PL02",name: "Physics and Chemistry Laboratory",credits: 2},
+      { sem: 1,code: "PUCC1PL01",name: "Professional English - I(Lab)",credits: 2},
+      { sem: 1,code: "PUCC1PL02",name: "Physics and Chemistry Laboratory",credits: 2},
       // { sem:1,  code: "PUCC1HM03", name: "Wellness", credits: 0 }
     ],
     2: [
@@ -101,7 +101,7 @@ const subjectsData = {
       {sem: 3,code: "PUCB3BS09",name: "Discrete Mathematics", credits: 4 },
       {sem: 3,code: "PUCB3PL01",name: "Business Communication Laboratory",credits: 1,},
       {sem: 3,code: "PUCC3HM07",name: "Extension Activities", credits: 0 },
-      {sem: 3,code: "PUCC3MC04",name: "The Constitution of India(Non-credit)",credits: 0},
+      {sem: 3,code: "PUCC3MC04",name: "Mandatory(Non-credit)",credits: 0},
       {sem: 3,code: "PUCS3PC01",name: "Computer Organization & Architecture",credits: 4},
       {sem: 3,code: "PUCS3PC03",name: "Data Structures and Algorithms",credits: 4},
       {sem: 3,code: "PUCS3PC04",name: "Object-Oriented Programming",credits: 3},
@@ -120,59 +120,6 @@ const subjectsData = {
         { sem:4, code: "PUCB4IP01", name: "In-Plant Training/Internship", credits: 0 }
     ],
   },
-
-//   "2024-2028": {
-//     1: [
-//       {sem: 1,code: "PUCC1HM01",name: "Professional English - I",credits: 2,},
-//       { sem: 1, code: "PUCC1BS01", name: "Matrices and Calculus", credits: 4 },
-//       { sem: 1, code: "PUCC1BS02", name: "Engineering Physics", credits: 3 },
-//       { sem: 1, code: "PUCC1BS03", name: "Engineering Chemistry", credits: 3 },
-//       { sem: 1, code: "PUCC1BE01", name: "Engineering Graphics", credits: 4 },
-//       { sem: 1, code: "PUCC1HM02", name: "Heritage of Tamil", credits: 1 },
-//       {sem: 1,code: "PUCC1PL01",name: "Professional English - I(Lab)",credits: 2},
-//       {sem: 1,code: "PUCC1PL02",name: "Physics and Chemistry Laboratory",credits: 2,},
-//       // { sem:1,  code: "PUCC1HM03", name: "Wellness", credits: 0 }
-//     ],
-//     2: [
-//       {sem: 2,code: "PUCC2HMO4",name: "Professional English - II",credits: 2},
-//       {sem: 2,code: "PUCC2BS04",name: "Statistics and Numerical Methods",credits: 4},
-//       {sem: 2,code: "PUCS2BS05",name: "Physics for Information Sciences",credits: 3},
-//       {sem: 2,code: "PUCC2BE02",name: "Basic Electrical and Electronics Engineering",credits: 3},
-//       {sem: 2,code: "PUCC2BE03",name: "Introduction to Computer Science & Business Systems",credits: 3},
-//       {sem: 2,code: "PUCC2BE04",name: "Problem Solving using Python Programming",credits: 2},
-//       {sem: 2,code: "PUCC2HM05",name: "தமிழரும் தொழில்நுட்பமும்",credits: 1},
-//       {sem: 2,code: "PUCC2PL03",name: "Professional English - II(Lab)",credits: 2},
-//       {sem: 2,code: "PUCC2PL04",name: "Problem Solving using Python Programming Laboratory",credits: 2},
-//       {sem: 2,code: "PUCC2PL05",name: "Civil and Mechanical Engineering Practices",credits: 1},
-//       {sem: 2,code: "PUCC2PL06",name: "Electrical and Electronics Engineering Preactices",credits: 1},
-//       // { sem:2, code: "PUCC2HM06", name: "Wellness", credits: 0 },
-//     ]/*,
-//     3: [
-//       { sem: 3, code: "PUCB3BS09", name: "Discrete Mathematics", credits: 4 },
-//       {sem: 3,code: "PUCS3PC01",name: "Computer Organization & Architecture",credits: 4},
-//       {sem: 3,code: "PUAD2BE03",name: "Fundamentals of Data Science and Analytics",credits: 3},
-//       {sem: 3,code: "PUCS3PC03",name: "Data Structures and Algorithms",credits: 4},
-//       {sem: 3,code: "PUCS3PC04",name: "Object-Oriented Programming",credits: 3},
-//       {sem: 3,code: "PUCC3MCXX",name: "Mandatory Course-I(Non-credit)",credits: 0},
-//       {sem: 3,code: "PUAD3PL02",name: "Data Structures and Algorithms Laboratory I",credits: 2},
-//       {sem: 3,code: "PUCS3PL02",name: "Object-Oriented Programmin Laboratory",credits: 2},
-//       {sem: 3,code: "PUCB3PL01",name: "Business Communication Laboratory",credits: 1},
-//       { sem: 3, code: "PUCC3HM07", name: "Extension Activities", credits: 0 },
-//     ] ,
-//     4: [
-//         { sem:4, code: "PUCC4BS06", name: "Environmental Sciences & Sustainability", credits: 3 },
-//         { sem:4, code: "PUCB4PC01", name: "Intoduction to Innovation, IPR and Product Development", credits: 3 },
-//         { sem:4, code: "PUCB4PC02", name: "Embedded Systems and IOT", credits: 4 },
-//         { sem:4, code: "PUIT4PC03", name: "Database Management Systems", credits: 4 },
-//         { sem:4, code: "PUIT4PC04", name: "Operating Systems", credits: 4 },
-//         { sem:4, code: "PUCC4MCXX", name: "Mandatory Course-II(Non-credit)", credits: 0 },
-//         { sem:4, code: "PUIT4PL01", name: "Operating Systems Laboratory", credits: 2 },
-//         { sem:4, code: "PUIT4PL02", name: "Database Management Systems Laboratory", credits: 2 },
-//         { sem:4, code: "PUCC4HM08", name: "Extension Activities", credits: 0 },
-//         { sem:4, code: "PUCB4IP01", name: "In-Plant Training/Internship", credits: 0 }
-//     ],*/
-//   },
-
 };
 
 subjectsData["2024-2028"] = {
