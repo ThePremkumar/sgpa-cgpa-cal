@@ -86,7 +86,7 @@ p {
 }
   
 /* Keyframe Animations */
-@keyframes slideInFromTop {
+/* @keyframes slideInFromTop {
   0% {
     transform: translateY(-100%);
     opacity: 0;
@@ -116,7 +116,7 @@ p {
   60% {
     transform: translateY(-10px);
   }
-}
+} */
 
 label {
   display: block;
